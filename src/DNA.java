@@ -14,6 +14,13 @@ public class DNA {
         String dna1 ="ATGCGATACGCTTGA", dna2 = "ATGCGATACGTGA", dna3 = "ATTAATATGTACTGA", dna = dna1 + dna2 + dna3;
 
         System.out.println(dna.length());
+        int condonStart = dna.indexOf("ATG");
+        int condonEnd = dna.indexOf("TGA");
+
+        if (condonStart != -1 && condonEnd != -1 && (condonEnd - condonStart) % 3 == 0) {
+            String protein = dna.substring(condonStart, condonEnd + 3);
+            System.out.println("Protein: " + protein);
+        }
 
 
 
