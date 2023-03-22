@@ -20,6 +20,8 @@ public class DNA {
         if (condonStart != -1 && condonEnd != -1 && (condonEnd - condonStart) % 3 == 0) {
             String protein = dna.substring(condonStart, condonEnd + 3);
             System.out.println("Protein: " + protein);
+        } else {
+            System.out.println("No protein");
         }
 
 
